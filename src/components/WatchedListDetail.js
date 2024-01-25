@@ -63,7 +63,7 @@ const WatchedListDetail = () => {
           viewBox="0 0 24 24"
           strokeWidth="1.5"
           stroke="currentColor"
-          className="w-6 h-6 cursor-pointer"
+          className="w-4 h-4 cursor-pointer"
           onClick={() => handleRatingClick(movie.id, i)}
         >
           <path
@@ -126,15 +126,13 @@ const WatchedListDetail = () => {
 
               {movie.rating && movie.comment && (
                 <div className="text-white mt-3 mb-5 flex flex-col max-w-full h-auto py-3 px-5 rounded overflow-hidden shadow-xl bg-[#212121]">
-                  <div className="text-white font-bold">Your Review</div>
-                  <div className="mt-3 flex items-center gap-4">
-                    <div className="xl:w-[80px] w-auto">Rating</div>
-                    <div>:</div>
-                    <div className="flex items-center gap-1 text-[#eab308]">{renderStars(movie)}</div>
+                  <div className="text-white font-bold text-lg">Your Review</div>
+                  <div className="mt-3 flex flex-col items-start">
+                    <div className="xl:w-[80px] w-auto font-bold">Rating</div>
+                    <div className="flex items-center gap-1 text-[#eab308] text-base"> {renderStars(movie)}</div>
                   </div>
-                  <div className="flex items-center gap-4">
-                    <div className="xl:w-[80px] w-auto">Comment</div>
-                    <div>:</div>
+                  <div className="mt-3 flex flex-col items-start">
+                    <div className="xl:w-[80px] w-auto font-bold">Comment</div>
                     <p>{movie.comment}</p>
                   </div>
                 </div>
