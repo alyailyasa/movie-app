@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.App {
+  text-align: center;
+}
+
+
+.max-w-sm {
+  max-width: 20rem;
+}
+
+.object-cover {
+  object-fit: cover;
+}
+
+
+.slick-prev {
+  left: 0px !important;
+  z-index: 1;
+}
+
+.slick-next {
+  right: 0px !important;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .slick-prev {
+    left: 0 !important;
+  }
+
+  .slick-next {
+    right: 0 !important;
+  }
+
+  .slick-track{
+    display: flex !important;
+    gap: 2px !important;
+  }
+}
+
+.slick-track{
+  display: flex !important;
+  gap: 5px !important;
+}
